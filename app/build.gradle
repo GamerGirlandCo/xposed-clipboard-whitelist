@@ -3,6 +3,17 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            keyPassword '1'
+        }
+        release {
+            storeFile file('C:\\Users\\Corinthe\\projs\\clipmod\\keys\\my-release-key.keystore')
+            storePassword '123456'
+            keyAlias 'tabs!'
+            keyPassword '123456'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
@@ -10,15 +21,17 @@ android {
         minSdk 30
         targetSdk 32
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -33,9 +46,9 @@ dependencies {
 //    compileOnly 'de.robv.android.xposed:api:82:sources'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
-    compileOnly files("C:\\Users\\Corinthe\\Downloads\\api-82.jar")
+    compileOnly files("./libs/api-82.jar")
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    compileOnly files("C:\\Users\\Corinthe\\Downloads\\api-82-sources.jar")
+    compileOnly files("./libs/api-82-sources.jar")
 }

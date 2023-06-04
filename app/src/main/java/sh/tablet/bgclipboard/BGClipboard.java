@@ -23,20 +23,13 @@ public class BGClipboard implements IXposedHookLoadPackage {
         Log.d(BGClipboard.logtag, "proc = " + lpparam.processName);
         XposedBridge.log(BGClipboard.logtag + " - Loaded app: " + lpparam.packageName);
         Class<?> cb = findClass("com.android.server.clipboard.ClipboardService",lpparam.classLoader);
-        int ourindex = -1;
         Method[] m = cb.getDeclaredMethods();
-        for(int i = 0; i < m.length; i++) {
-            Log.d(BGClipboard.logtag, "... " + m[i].getName());
-            if (m[i].getName().contains("Allowed") && !m[i].getName().contains("$")) {
-                ourindex = i + 1;
-                Log.d(BGClipboard.logtag, "found it!!!!! " + m[ourindex].getName());
-                break;
+        for (Method method : m) {
+            Log.d(BGClipboard.logtag, "... " + method.getName());
+            if (method.getName().contains("Allowed") && !method.getName().contains("$")) {
+                XposedBridge.hookMethod(method, XC_MethodReplacement.returnConstant(10000, true));
+                Log.d(BGClipboard.logtag, "found it!!!!! " + method.getName());
             }
-        }
-        if(ourindex != -1) {
-            Log.d(BGClipboard.logtag, String.format("falalalalala\n %d %s", ourindex, m[ourindex].getName()));
-            XposedBridge.hookMethod(m[ourindex], XC_MethodReplacement.returnConstant(10000, true));
-
         }
     }
 }
