@@ -17,7 +17,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="An example which changes the color of clock text in status bar" />
+            android:value="Allowing apps to access the clipboard in the background" />
         <meta-data
             android:name="xposedminversion"
             android:value="53" />
