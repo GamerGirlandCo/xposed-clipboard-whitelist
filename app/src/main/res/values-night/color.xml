@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorThemeBackground">#FF121318</color>
+	<color name="colorGrayLighter">#FF30363A</color>
+	<color name="colorGray">#5E6870</color>
+	<color name="colorTextDark">#FFCFCFCF</color>
+	<color name="colorGrayDarker">#BDBDBD</color>
+	<color name="colorText">#FFFEFEFE</color>
+</resources>

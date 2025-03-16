@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/settingToggleRoot"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="@color/colorGrayLighter"
+		app:cardCornerRadius="12dp"
+		app:strokeWidth="0dp"
+		app:contentPadding="13dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+		<ImageView
+				android:id="@+id/appIcon"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/appNameAndId"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		<LinearLayout
+				android:id="@+id/appNameAndId"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:orientation="vertical"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/toggleSwitch"
+				app:layout_constraintStart_toEndOf="@+id/appIcon"
+				app:layout_constraintTop_toTopOf="parent"
+				android:layout_marginHorizontal="12dp"
+				app:layout_constraintHorizontal_weight="1">
+
+			<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/appName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/placeholder_ellipsis"
+					android:textColor="@color/colorText"
+					android:textSize="15sp" />
+
+			<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/appId"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/colorText"
+					android:alpha="0.6"
+					android:text="@string/placeholder_ellipsis"
+					android:textSize="12sp" />
+
+		</LinearLayout>
+
+		<com.google.android.material.materialswitch.MaterialSwitch
+				android:id="@+id/toggleSwitch"
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+				app:flow_verticalAlign="center"
+				android:checked="true"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/appNameAndId"
+				app:layout_constraintTop_toTopOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

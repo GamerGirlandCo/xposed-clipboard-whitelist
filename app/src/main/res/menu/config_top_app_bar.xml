@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		tools:ignore="AlwaysShowAction"
+		>
+	<item
+			android:id="@+id/btnRefreshApps"
+			android:icon="@drawable/arrows_rotate"
+			android:iconTint="@color/colorText"
+			android:iconTintMode="src_over"
+			android:title="@string/action_refresh_apps"
+			app:showAsAction="ifRoom"/>
+	<item
+		android:id="@+id/btnShowSystem"
+		android:title="@string/action_show_system_apps"
+		app:showAsAction="never"
+			android:checkable="true"
+		/>
+	<!--<item android:id="@+id/btnMore"
+			android:icon="@drawable/ellipsis_vertical"
+			android:iconTint="@color/colorText"
+			android:iconTintMode="src_over"
+			android:title="@string/placeholder_ellipsis"
+			app:showAsAction="always"
+	/>-->
+</menu>

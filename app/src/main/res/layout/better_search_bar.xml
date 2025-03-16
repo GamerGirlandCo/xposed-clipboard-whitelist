@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/textBoxWrapper"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingEnd="96dp"
+		app:boxBackgroundMode="filled"
+		app:boxStrokeWidth="0dp"
+		app:boxStrokeWidthFocused="0dp"
+		app:endIconMode="clear_text"
+		app:hintEnabled="true"
+		tools:ignore="RtlSymmetry">
+
+	<sh.tablet.bgclipboard.ui.ClearFocusEditText
+			android:id="@+id/textBox"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_centerVertical="true"
+			android:background="@color/trans"
+			android:baselineAligned="false"
+			android:inputType="text"
+			android:maxLines="1"
+			android:paddingStart="52dp"
+			android:textColor="@color/colorText" />
+</com.google.android.material.textfield.TextInputLayout>

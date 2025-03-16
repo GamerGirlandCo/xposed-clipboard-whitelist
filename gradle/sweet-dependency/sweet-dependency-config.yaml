@@ -1,0 +1,70 @@
+preferences:
+  autowire-on-sync-mode: UPDATE_ALL_DEPENDENCIES
+  repositories-mode: PREFER_SETTINGS
+
+repositories:
+  gradle-plugin-portal:
+    scope: PLUGINS
+  google:
+  maven-central:
+  jit-pack:
+  sonatype-oss-releases:
+  rovo89-xposed-api:
+    scope: LIBRARIES
+    url: https://api.xposed.info/
+    content:
+      include:
+        group:
+          de.robv.android.xposed
+
+plugins:
+  com.android.application:
+    alias: android-application
+    version: 8.9.0
+  org.jetbrains.kotlin.android:
+    alias: kotlin-android
+    version: 2.1.10
+  com.google.devtools.ksp:
+    alias: kotlin-ksp
+    version: 2.1.10-1.0.31
+  androidx.room:
+    alias: android-x-room
+    version: 2.7.0-rc02
+    repositories:
+      google
+
+libraries:
+  de.robv.android.xposed:
+    api:
+      version: 82
+      repositories:
+        rovo89-xposed-api
+  com.highcapable.yukihookapi:
+    api:
+      version: 1.2.1
+    ksp-xposed:
+      version-ref: <this>::api
+  com.github.duanhong169:
+    drawabletoolbox:
+      version: 1.0.7
+  androidx.core:
+    core-ktx:
+      version: 1.15.0
+  androidx.appcompat:
+    appcompat:
+      version: 1.7.0
+  com.google.android.material:
+    material:
+      version: 1.12.0
+  androidx.constraintlayout:
+    constraintlayout:
+      version: 2.2.1
+  androidx.test.ext:
+    junit:
+      version: 1.2.1
+  androidx.test.espresso:
+    espresso-core:
+      version: 3.6.1
+  junit:
+    junit:
+      version: 4.13.2

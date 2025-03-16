@@ -1,0 +1,20 @@
+<resources>
+	<!-- Base application theme. -->
+	<style name="Theme.AppDefault" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+		<!-- Primary brand color. -->
+		<item name="colorPrimary">@color/accent1</item>
+		<item name="colorSecondary">@color/accent2</item>
+		<!--<item name="colorPrimaryVariant">@color/accent1</item>
+		<item name="colorOnPrimary">@color/accent1t</item>-->
+
+		<!-- Secondary brand color. -->
+		<!--<item name="colorSecondary">@color/colorPrimaryAccent</item>
+		<item name="colorSecondaryVariant">@color/colorPrimaryAccent</item>
+		<item name="colorOnSecondary">@color/colorPrimaryAccent</item>-->
+
+		<!-- Status bar color. -->
+		<item name="android:statusBarColor">@color/white</item>
+		<item name="android:windowLightStatusBar">false</item>
+		<!-- Customize your theme here. -->
+	</style>
+</resources>
